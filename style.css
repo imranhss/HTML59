@@ -1,0 +1,21 @@
+*{
+    background-color: cornsilk;
+}
+
+#table1{
+    border:solid  orange 1px; 
+    width: 100%; 
+    background-color: aqua; 
+    text-align: center;
+}
+
+#table2{
+    border:solid  rgb(240, 153, 179) 1px; 
+    width: 100%; 
+    background-color: tomato; 
+    text-align: center;
+}
+
+#table2 tr:nth-child(odd){
+    background-color: beige;
+}
