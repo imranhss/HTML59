@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+
     <title>Document</title>
 </head>
 
@@ -27,10 +31,11 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-home"
+                                aria-hidden="true"></i> Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#about"><i class="fa-solid fa-address-card"></i> About</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -55,6 +60,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">Feed Back</a>
+                    </li>
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -66,7 +74,7 @@
     <!-- end nav -->
 
     <!-- start slide -->
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleAutoplaying" class="carousel slide d-none d-sm-block" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="3000">
                 <img src="image/1.jpg" class="d-block w-100" alt="..." height="450px">
@@ -185,9 +193,9 @@
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                                <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
-                                    aria-controls="panelsStayOpen-collapseTwo">
+                                <button class="accordion-button collapsed bg-warning" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
+                                    aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                                     Education
                                 </button>
                             </h2>
@@ -205,9 +213,9 @@
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                                <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
-                                    aria-controls="panelsStayOpen-collapseThree">
+                                <button class="accordion-button collapsed bg-warning" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
+                                    aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
                                     Working Experience
                                 </button>
                             </h2>
@@ -236,15 +244,54 @@
     <!-- end Portfolio -->
 
     <!-- start Contact -->
-    <section id="contact" >
+    <section id="contact">
         <div class="row mx-5">
             <div class="text-center mb-3 ">
                 <h1>Say Hello</h1>
                 <hr>
-                
+
             </div>
 
-            <div class="col-md-6" >
+            <div class="col-md-6">
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+            </div>
+
+            <div class="col-md-6 d-none d-sm-block">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14604.5443370479!2d90.3610619044625!3d23.778167940191956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7921c87c307%3A0xc9e8456cd1e470d9!2sIDB%20Bhaban!5e0!3m2!1sen!2sbd!4v1708255775004!5m2!1sen!2sbd"
+                    width="600" height="250" style="border:2;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        </div>
+    </section>
+    <!-- end Contact -->
+
+
+    <div class="modal fade bg-transparent" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
                 <form>
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Email address</label>
@@ -259,20 +306,22 @@
                       <input type="checkbox" class="form-check-input" id="exampleCheck1">
                       <label class="form-check-label" for="exampleCheck1">Check me out</label>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    
                   </form>
-
+                
             </div>
-
-            <div class="col-md-6">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14604.5443370479!2d90.3610619044625!3d23.778167940191956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7921c87c307%3A0xc9e8456cd1e470d9!2sIDB%20Bhaban!5e0!3m2!1sen!2sbd!4v1708255775004!5m2!1sen!2sbd" width="600" height="250" style="border:2;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   
+            <div class="modal-footer">
+             
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
             </div>
-
+          </div>
         </div>
-    </section>
-    <!-- end Contact -->
+      </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+
+
+
 </body>
 
 </html>
